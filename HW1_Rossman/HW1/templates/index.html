@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="content-section">
+	<form method="POST" action="/predict">
+		<div class="form-group">
+			<div class="row">
+
+
+				<!--  COLUMN ONE  -->
+
+				<div class="col-lg-6">
+
+					<h1>Rossmann Store Sales Predictor</h1>
+
+					<p> Rossmann operates over 3,000 drug stores in 7 European countries. Currently, Rossmann store
+						managers are tasked with predicting their daily sales for up to six weeks in advance. Store
+						sales are influenced by many factors, including promotions, competition, school and state
+						holidays, seasonality, and locality. With thousands of individual managers predicting sales
+						based on their unique circumstances, the accuracy of results can be quite varied.</p>
+
+					<h1>
+						{% if label %} {{ label }} {% endif %}
+					</h1>
+
+					<br>
+					<button class="btn btn-lg btn-primary" type="submit">
+						Predict
+						</bitton>
+
+				</div>
+
+
+				<!--  COLUMN TWO  -->
+
+				<!--  START OF PART 2.2 -->
+
+				<div class="col-lg-6 mx-auto"><br>
+
+
+					<!--  YOUR CODE START HERE-->
+					<!--  Follow comments further down for all 5 dropdowns -->
+					<!--
+    						 1. create drop-down for "Day_of_the_Week" feature
+						-->
+					<label for="day_of_the_week">Day of the Week</label><br>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="day_of_the_week"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span id="day_select">Monday</span>
+						</button>
+						<div class="dropdown-menu" id="day_dropdown" aria-labelledby="day_of_the_week">
+							<li><a class="dropdown-item" href="#">Monday</a></li>
+							<li><a class="dropdown-item" href="#">Tuesday</a></li>
+							<li><a class="dropdown-item" href="#">Wednesday</a></li>
+							<li><a class="dropdown-item" href="#">Thursday</a></li>
+							<li><a class="dropdown-item" href="#">Friday</a></li>
+							<li><a class="dropdown-item" href="#">Saturday</a></li>
+							<li><a class="dropdown-item" href="#">Sunday</a></li>
+						</div>
+					</div>
+
+
+					<!--
+    						 2. create drop-down for "Open" feature
+						-->
+					<label for="open">Open</label>
+					<p><small>Mon - Sun | Open = 1 </small></p>
+					<div class="dropdown">
+						<button class="btn btn-secondary dropdown-toggle" type="button" id="open" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							<span id="open_select">1</span>
+						</button>
+						<div class="dropdown-menu" id="open_dropdown" aria-labelledby="open">
+							<li><a class="dropdown-item" href="#">0</a></li>
+							<li><a class="dropdown-item" href="#">1</a></li>
+						</div>
+					</div>
+
+
+					<!--
+    						 3. create drop-down for "Promo" feature
+						-->
+
+					<label for="promo">Promo</label>
+					<p><small>store running a Promo = 0/1 </small></p>
+
+
+					<!--
+    						 4. create drop-down for "State Holiday" feature
+						-->
+					<label for="state_holliday">State Holiday</label><br>
+
+
+
+					<!--
+    						 5. create drop-down for "School Holiday" feature
+						-->
+					<label for="school_holliday">School Holiday</label>
+					<p><small>1 = None | 1 = public holiday <br> 3 = Easter holiday | 4 = Christmas</small></p>
+
+
+					<!--  END OF PART 2.2 -->
+
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Store #</span>
+						</div>
+						<input type="text" name="store" value="1" class="form-control" aria-label="With textarea">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</form>
+	</div>
+	</div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}
