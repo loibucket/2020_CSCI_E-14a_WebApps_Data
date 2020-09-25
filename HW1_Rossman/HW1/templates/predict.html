@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="content-section">
+    <div class="row">
+
+        {# COLUMN ONE #}
+
+        <div class="col-lg-6">
+
+            <h1>Rossmann Store Sales Predictor</h1>
+
+            <p> Rossmann operates over 3,000 drug stores in 7 European countries. Currently, Rossmann store
+                managers are tasked with predicting their daily sales for up to six weeks in advance. Store
+                sales are influenced by many factors, including promotions, competition, school and state
+                holidays, seasonality, and locality. With thousands of individual managers predicting sales
+                based on their unique circumstances, the accuracy of results can be quite varied.</p>
+
+            <h1>
+                {% if label %} {{ label }} {% endif %}
+            </h1>
+
+            <br>
+
+            <h2>{{ prediction }}</h2>
+
+        </div>
+
+
+        {# COLUMN TWO #}
+
+        {# START OF PART 2.2 #}
+
+        <div class="col-lg-auto mx-auto"><br>
+
+            {# YOUR CODE START HERE#}
+            {# Follow comments further down for all 5 dropdowns #}
+            {#
+            1. create drop-down for "Day_of_the_Week" feature
+            #}
+
+            <label><br>Month</label><br>
+            <h2>{{ month }}</h2>
+
+            <label><br>Day of the Week</label><br>
+            <h2>{{ day }}</h2>
+            {#
+            2. create drop-down for "Open" feature
+            #}
+            <label><br>Open</label>
+            {# <p><small>Mon - Sun | Open = 1 </small></p> #}
+            <h2>{{ open }}</h2>
+            {#
+            3. create drop-down for "Promo" feature
+            #}
+            <label><br>Promo</label>
+            <h2>{{ promo }}</h2>
+
+        </div>
+
+        <div class="col-lg-auto mx-auto"><br>
+            {#
+            4. create drop-down for "State Holiday" feature
+            #}
+            <label><br>State Holiday</label><br>
+            <h2>{{ state_holiday }}</h2>
+            {#
+            5. create drop-down for "School Holiday" feature
+            #}
+            <label><br>School Holiday</label>
+            <h2>{{ school_holiday }}</h2>
+
+            {# END OF PART 2.2 #}
+
+            <label><br>Store</label><br>
+            <h2>{{ store }}</h2>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}
