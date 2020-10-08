@@ -13,3 +13,9 @@
 [submodule "biwada-2020-loi-cheng-lab4"]
 	path = biwada-2020-loi-cheng-lab4
 	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-lab4
+[submodule "biwada-2020-loi-cheng-hw2"]
+	path = biwada-2020-loi-cheng-hw2
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-hw2
+[submodule "biwada-2020-loi-cheng-lab5"]
+	path = biwada-2020-loi-cheng-lab5
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-lab5
