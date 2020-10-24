@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <header class="masthead d-flex">
+        <div class="container text-center my-auto">
+
+            <!-- Welcome user -->
+            <div class="row">
+                <div class="col-xl">
+                    <h2 class="mb-2">{{ message }}</h2>
+                </div>
+            </div>
+
+            <div style="padding-top:30;
+              padding-bottom:30;
+              background-color:#ffffff55;
+              -moz-border-radius: 5px;
+              -webkit-border-radius: 5px;">
+
+                <!-- List posts -->
+                {% for p in posts %}
+                    <p class="font-weight-normal post_line">{{ p }}</p>
+                {% endfor %}
+
+            </div>
+
+            <br>
+            <div class="row">
+
+                {% if session_username is defined %}
+
+                    <!-- New Post button -->
+                    <div class="col-sm-3">
+                        <form action="/logout" method="POST">
+                            <a href="/newpost">
+                                <button type="button" class="btn btn-primary" id="newpost_button">New Post</button>
+                            </a>
+
+                            <!-- Logout button -->
+                            <button type="submit" class="btn btn-warning" id="logout_button">Log Out</button>
+                        </form>
+                    </div>
+
+                {% else %}
+
+                    <div class="col-sm-3">
+
+                        <!-- Login button -->
+                        <a href="/login">
+                            <button type="button" class="btn btn-primary" id="login_button">Login</button>
+                        </a>
+
+                        <!-- Signup button -->
+                        <a href="/signup">
+                            <button type="button" class="btn btn-primary" id="signup_button">Sign Up</button>
+                        </a>
+                    </div>
+
+                {% endif %}
+
+                <div class="col-sm-6">
+                    <!-- Search box -->
+                    <div class="input-group mb-3">
+
+                        <!-- Search form -->
+                        <div class="col-xl-10">
+                            <input class="form-control search_text" type="text" placeholder="Search Username"
+                                   aria-label="Search" id="search_text" name="search_text">
+                        </div>
+
+                        <!-- Search button -->
+                        <div class="col-xl-2">
+                            <button class="btn btn-primary" type="button" id="search_button">Search</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+    </header>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        //search for user
+        $("#search_button").on("click", () => window.location.assign('/profile/' + $("#search_text").val()))
+    </script>
+{% endblock %}

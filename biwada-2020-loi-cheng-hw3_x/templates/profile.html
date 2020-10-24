@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <header class="masthead d-flex">
+        <div class="container text-center my-auto">
+
+            <h4><a href="{{ url_for('index') }}">back to {{ session.username }}'s Home</a></h4>
+            <h1>{{ user.username }} 's Posts </h1>
+
+
+            <div class="container text-center my-auto">
+                <br>
+                <div class="col-lg-8 mx-auto" class="page-title">
+
+                    <div style="padding-top:30;
+              padding-bottom:30;
+              background-color:#ffffff55;
+              -moz-border-radius: 5px;
+              -webkit-border-radius: 5px;">
+
+
+                        <!-- List posts -->
+                        {% for p in posts %}
+                            <p class="font-weight-normal post_line">{{ p }}</p>
+                        {% endfor %}
+
+
+                    </div>
+                    <br>
+                </div>
+
+                {% if not same_person %}
+                    <!-- Unfollow/Follow button -->
+                    {% if followed %}
+                        <form method="POST" action={{ "/profile/"~user.username~"/unfollow" }}>
+                            <button class="btn btn-primary" type="submit" id="unfollow_button">Unfollow</button>
+                        </form>
+                    {% else %}
+                        <form method="POST" action={{ "/profile/"~user.username~"/follow" }}>
+                            <button class="btn btn-warning" type="submit" id="follow_button">Follow</button>
+                        </form>
+                    {% endif %}
+                {% endif %}
+
+                <input type="hidden" id="fol" name="fol" value={{ user.username }}>
+            </div>
+    </header>
+{% endblock %}
+
+{% block script %}
+    <script>
+        //follow
+        //$("#follow_button").on("click", () => window.location.assign('/profile/' + $("#fol").val() + '/follow'))
+        //unfollow
+        //$("#unfollow_button").on("click", () => window.location.assign('/profile/' + $("#fol").val() + '/unfollow'))
+    </script>
+{% endblock %}

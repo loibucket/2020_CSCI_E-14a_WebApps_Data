@@ -1,0 +1,46 @@
+.newpost_form {
+    width: 500px;
+}
+
+.post_line {
+
+}
+
+.btn {
+    margin: 10px;
+}
+
+.search_text {
+    margin: 10px;
+}
+
+/*
+#post_box {
+    margin: auto;
+    width: 60%;
+}
+
+#login_button {
+    margin: 10px;
+}
+
+#signup_button {
+    margin: 10px;
+}
+
+#search_button {
+    margin: 10px;
+}
+
+#newpost_button {
+    margin: 10px;
+}
+
+#logout_button {
+    margin: 10px;
+}
+
+
+
+
+
