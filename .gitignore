@@ -127,3 +127,13 @@ dmypy.json
 #
 *DS_Store
 .DS_Store
+*.env
+*.noupload
+*.idea
+.idea/
+*.log
+*pycache*
+migrations/
+__pycache__/
+*.vscode
+.vscode/
