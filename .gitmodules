@@ -25,3 +25,6 @@
 [submodule "biwada-2020-loi-cheng-hw3"]
 	path = biwada-2020-loi-cheng-hw3
 	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-hw3
+[submodule "biwada-2020-loi-cheng-midterm"]
+	path = biwada-2020-loi-cheng-midterm
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-midterm
