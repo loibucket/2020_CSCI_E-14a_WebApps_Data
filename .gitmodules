@@ -1,0 +1,30 @@
+[submodule "biwada-2020-loi-cheng-hw1"]
+	path = biwada-2020-loi-cheng-hw1
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-hw1.git
+[submodule "biwada-2020-loi-cheng-lab1"]
+	path = biwada-2020-loi-cheng-lab1
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-lab1
+[submodule "biwada-2020-loi-cheng-lab2"]
+	path = biwada-2020-loi-cheng-lab2
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-lab2
+[submodule "biwada-2020-loi-cheng-lab3"]
+	path = biwada-2020-loi-cheng-lab3
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-lab3
+[submodule "biwada-2020-loi-cheng-lab4"]
+	path = biwada-2020-loi-cheng-lab4
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-lab4
+[submodule "biwada-2020-loi-cheng-hw2"]
+	path = biwada-2020-loi-cheng-hw2
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-hw2
+[submodule "biwada-2020-loi-cheng-lab5"]
+	path = biwada-2020-loi-cheng-lab5
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-lab5
+[submodule "biwada-2020-loi-cheng-lab6"]
+	path = biwada-2020-loi-cheng-lab6
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-lab6
+[submodule "biwada-2020-loi-cheng-hw3"]
+	path = biwada-2020-loi-cheng-hw3
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-hw3
+[submodule "biwada-2020-loi-cheng-midterm"]
+	path = biwada-2020-loi-cheng-midterm
+	url = https://github.com/Harvard-DCE-BIWADA/biwada-2020-loi-cheng-midterm
